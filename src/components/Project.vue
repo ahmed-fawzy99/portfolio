@@ -19,9 +19,9 @@ defineProps({
       <h5 class="font-bold tracking-tight text-base-400 p-0 pb-1">{{ title }}</h5>
       <p class="font-normal p-0">{{ description }}</p>
     <div class="flex justify-between items-baseline">
-      <div class="inline-block">
+      <ul class="inline-block">
         <SkillList v-for="skill in skills" :key="skill" class="mb-0 mt-2">{{ skill }}</SkillList>
-      </div>
+      </ul>
       <p class="font-light text-base-400 p-0 pt-1 text-[0.6rem] inline float-end  ">{{ year }}</p>
     </div>
   </a>
