@@ -140,7 +140,7 @@ onMounted(() => {
         </section>
         <section id="skills">
           <h2 class="text-2xl font-bold mb-2 text-center lg:text-start">Skills</h2>
-          <ul>
+          <ul class="text-center lg:text-start">
             <SkillList>Laravel</SkillList>
             <SkillList>Vue.js</SkillList>
             <SkillList>TailwindCSS</SkillList>
