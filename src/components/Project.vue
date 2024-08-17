@@ -1,5 +1,6 @@
 <script setup>
 import SkillList from "@/components/SkillList.vue";
+import {ArrowTopRightOnSquareIcon} from '@heroicons/vue/24/solid';
 
 defineProps({
   link: String,
@@ -14,7 +15,7 @@ defineProps({
 
   <a :href="link" target="_blank"
      class="block w-full px-4 py-3 text-xs border border-base-500 rounded-lg shadow hover:bg-base-700 h-fit">
-    <span class="float-end text-base-400/50">🡥</span>
+    <span class="float-end text-base-300/50"><ArrowTopRightOnSquareIcon class="size-4"/></span>
       <h5 class="font-bold tracking-tight text-base-400 p-0 pb-1">{{ title }}</h5>
       <p class="font-normal p-0">{{ description }}</p>
     <div class="flex justify-between items-baseline">
