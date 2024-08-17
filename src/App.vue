@@ -1,9 +1,94 @@
 <script setup>
-
 import Layout from "@/components/Layout.vue";
 import SocialMediaList from "@/components/SocialMediaList.vue";
 import SkillList from "@/components/SkillList.vue";
 import Project from "@/components/Project.vue";
+import {onMounted, ref} from "vue";
+import Swal from "sweetalert2";
+
+const isSending = ref(false);
+
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 2500,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+
+const contactHandler = () => {
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+  const data = {
+    email,
+    subject,
+    message
+  };
+  isSending.value = true;
+  fetch('http://127.0.0.1:3000/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    signal: AbortSignal.timeout(10000),
+    body: JSON.stringify(data)
+  }).then(response => {
+    if (response.ok) {
+      Toast.fire({
+        icon: "success",
+        title: "Message sent successfully"
+      });
+    } else {
+      Toast.fire({
+        icon: "error",
+        title: "Error: " + response.status + " - " + response.statusText
+      });
+    }
+  }).catch(error => {
+    Toast.fire({
+      icon: "error",
+      title: "Error: " + error
+    });
+  }).finally(() => {
+    isSending.value = false;
+  });
+};
+
+onMounted(() => {
+  const sections = document.querySelectorAll('section');
+  function observe() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          history.replaceState(null, null, `#${entry.target.id}`);
+          const sectionText = document.getElementById(entry.target.id + "-a").innerText;
+          if (!sectionText.startsWith('___')) {
+            document.getElementById(entry.target.id + "-a").innerText = '___' + document.getElementById(entry.target.id + "-a").innerText + '___';
+          }
+          for (const section of sections) {
+            console.log(`${section.id} - ${entry.target.id}`);
+            if (section.id !== entry.target.id) {
+              const oldSection = document.getElementById(section.id + "-a");
+              oldSection.innerText = oldSection.innerText.replaceAll('___', '');
+            }
+          }
+        }
+      });
+    }, {threshold: 0.5});
+    sections.forEach(section => {
+      observer.observe(section);
+
+    });
+  }
+  // Attach the initializeObserver function to user interaction events
+  document.getElementById('right-content').addEventListener('scroll', () => {observe()}, { once: true });
+
+});
 </script>
 
 <template>
@@ -113,10 +198,10 @@ import Project from "@/components/Project.vue";
 
         <section id="contact">
           <h2 class="text-2xl font-bold text-center lg:text-start">Contact</h2>
-          <form class="w-full p-1 font-mono" method="post" action="https://ahmed.com/contact-us">
+          <form class="w-full p-1 font-mono" @submit.prevent="contactHandler">
             <div class="mb-2">
               <label for="email" class="block mb-1 text-xs font-medium text-base-200">Your email</label>
-              <input type="email" id="email"
+              <input  id="email"
                      class="shadow-sm bg-transparent border border-base-300 text-base-200 placeholder-base-200/50 text-xs rounded-lg focus:ring-base-500 focus:border-base-300 block w-full p-2"
                      placeholder="Ahmeddeghady99@gmail.com" required/>
             </div>
@@ -137,18 +222,21 @@ import Project from "@/components/Project.vue";
                   required/>
             </div>
             <button type="submit"
-                    class="w-full font-mono text-base-200 border border-base-300 hover:bg-base-800 focus:ring-2 focus:outline-none focus:ring-base-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-              Submit
+                    class="w-full font-mono text-base-200 border border-base-300 hover:bg-base-800 focus:ring-2 focus:outline-none focus:ring-base-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    :class="{ 'cursor-not-allowed ': isSending }"
+            >
+              <span v-if="!isSending">Submit</span>
+              <span v-else>Sending, Please Wait...</span>
             </button>
           </form>
         </section>
 
-        <section id="footer">
+        <footer>
           <p class="text-justify text-base-300 text-xs text-sans mb-6">
             Made with 💚 with Vue.js + TailwindCSS, and a touch of NodeJS to receive your messages.
-            Deployed on Google E2-micro.Coded on Webstorm.
+            Deployed on Google E2-micro. Coded on Webstorm.
           </p>
-        </section>
+        </footer>
       </div>
 
     </template>
