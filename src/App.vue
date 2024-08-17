@@ -39,6 +39,10 @@ const contactHandler = () => {
     body: JSON.stringify(data)
   }).then(response => {
     if (response.ok) {
+      // Clear the form
+      document.getElementById('email').value = '';
+      document.getElementById('subject').value = '';
+      document.getElementById('message').value = '';
       Toast.fire({
         icon: "success",
         title: "Message sent successfully"
