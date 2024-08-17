@@ -30,7 +30,7 @@ const contactHandler = () => {
     message
   };
   isSending.value = true;
-  fetch('http://127.0.0.1:3000/contact', {
+  fetch('https://server.ahmaddeghady.online/contact', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -71,7 +71,6 @@ onMounted(() => {
             document.getElementById(entry.target.id + "-a").innerText = '___' + document.getElementById(entry.target.id + "-a").innerText + '___';
           }
           for (const section of sections) {
-            console.log(`${section.id} - ${entry.target.id}`);
             if (section.id !== entry.target.id) {
               const oldSection = document.getElementById(section.id + "-a");
               oldSection.innerText = oldSection.innerText.replaceAll('___', '');
