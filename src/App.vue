@@ -5,6 +5,8 @@ import SkillList from "@/components/SkillList.vue";
 import Project from "@/components/Project.vue";
 import {onMounted, ref} from "vue";
 import Swal from "sweetalert2";
+import Experience from "@/components/Experience.vue";
+import ResumeDownload from "@/components/ResumeDownload.vue";
 
 const isSending = ref(false);
 
@@ -100,14 +102,16 @@ onMounted(() => {
       <div class="flex flex-col h-full">
         <div class="">
           <h1 class="text-4xl font-bold pt-0 text-center lg:text-start">Ahmed Deghady</h1>
-          <h3 class="text-xl text-center lg:text-start">Junior Full-Stack Developer</h3>
-          <p class="text-xs text-center lg:text-start">I build web applications and automate tasks.</p>
+          <h3 class="text-xl text-center lg:text-start">Full-Stack Developer</h3>
+          <p class="text-xs text-center lg:text-start">I build web apps and scrape data.</p>
         </div>
         <div class="mt-8">
           <ul class="space-y-2 text-center lg:text-start">
             <li><a id="about-a" href="#about">&#60;About&#62;</a></li>
             <li><a id="skills-a" href="#skills">&#60;Skills&#62;</a></li>
             <li><a id="projects-a" href="#projects">&#60;Projects&#62;</a></li>
+            <li><a id="work-a" href="#work">&#60;Experience&#62;</a></li>
+            <li><a id="resume-a" href="#resume">&#60;Resume&#62;</a></li>
             <li><a id="contact-a" href="#contact">&#60;Contact&#62;</a></li>
           </ul>
         </div>
@@ -124,32 +128,29 @@ onMounted(() => {
         <section id="about">
           <h2 class="text-2xl font-bold text-center lg:text-start">About</h2>
           <p class="text-justify text-base-300 text-xs text-sans">
-            A highly motivated junior full-stack developer with a passion for building web applications. Love
-            problem-solving and finding optimal solutions for recurring problems. I believe that if I have to do a job,
-            it has to be done perfectly with high attention to detail. Only fine lines divide between perfection and
-            "just average".
-            <!--            While all roads lead to Rome, I believe we have to choose the most optimal road to reach it. The destination is not all that matters, as the journey is as important as the destination itself. -->
-            <!--            I chose to specialize in full-stack web development because, well, everything is-->
-          </p>
-          <p class="text-justify text-base-300 text-xs text-sans">
-            I enjoy building web applications, scraping data, and automating tedious tasks.
-            I have 3 years skills with Laravel, Vue.js, TailwindCSS, and Inertia.js. I occasionally use Python and
-            Node.js for automation. I am looking for opportunities to work on projects that help me grow as a developer
-            and contribute to the community.
+            Full-stack developer with a passion for building scalable web applications that solve real-world problems. With expertise in Laravel, Vue.js, and modern development practices, I transform ideas into functional, user-friendly digital experiences.
           </p>
         </section>
         <section id="skills">
           <h2 class="text-2xl font-bold mb-2 text-center lg:text-start">Skills</h2>
           <ul class="text-center lg:text-start">
-            <SkillList>Laravel</SkillList>
-            <SkillList>Vue.js</SkillList>
-            <SkillList>TailwindCSS</SkillList>
+            <SkillList>⭐ Laravel</SkillList>
+            <SkillList>⭐ API Development</SkillList>
+            <SkillList>⭐ Vue.js</SkillList>
+            <SkillList>⭐ Nuxt.js</SkillList>
+            <SkillList>⭐ TailwindCSS</SkillList>
+            <SkillList>React</SkillList>
+            <SkillList>Next.js</SkillList>
             <SkillList>Inertia.js</SkillList>
-            <SkillList>Plain Javascript</SkillList>
+            <SkillList>TypeScript</SkillList>
             <SkillList>Python</SkillList>
             <SkillList>PHP</SkillList>
+            <SkillList>Web Scraping</SkillList>
             <SkillList>PostgreSQL</SkillList>
             <SkillList>GraphQL</SkillList>
+            <SkillList>LangChain</SkillList>
+            <SkillList>Stripe Integration</SkillList>
+            <SkillList>Bubble.io</SkillList>
             <SkillList>Linux Adminstration</SkillList>
             <SkillList>Bash Scripting</SkillList>
             <SkillList>Data Scraping</SkillList>
@@ -181,7 +182,7 @@ onMounted(() => {
           />
           <Project title="Al-Shahd Land-Registry System [Proprietary]"
                    description="An ERP system to manage Organization's Land assets, their owners, payment systems and data visualization for both the business managers and the land owners."
-                   link="https://landreg.almoroj.com/"
+                   link="https://almoroj.com/"
                    year="2023"
                    :skills="['Laravel', 'Livewire', 'Blade', 'Bootstrap']"
           />
@@ -199,6 +200,41 @@ onMounted(() => {
           />
         </section>
 
+        <section id="work" class="space-y-2">
+          <h2 class="text-2xl font-bold text-center lg:text-start">Work Experience</h2>
+          <Experience
+              title="Website Maintainer"
+              company="Coachlife.com"
+              location="New Zealand, Remote - Part-time"
+              start-date="Dec 2024"
+          >
+            <ul class="">
+              <li>- Diagnosed and resolved bugs to ensure a smooth, error-free user experience.</li>
+              <li>- Developed and deployed new features, enhancing functionality and user engagement.</li>
+              <li>- Monitored and maintained website performance, ensuring stability and reliability.</li>
+            </ul>
+          </Experience>
+          <Experience
+              title="Full-Stack Developer"
+              company="Freelance"
+              start-date="Jan 2023"
+              end-date="Dec 2024"
+              :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
+          >
+            <ul class="">
+              <li>- Designed, developed, and deployed dynamic full-stack web applications, web scrapers, and APIs
+                for startups and freelance clients, enhancing their operational efficiency.</li>
+              <li>- Created, maintained, and delivered front-end and back-end solutions, ensuring clean, maintainable
+                code and user-friendly interfaces.</li>
+              <li>- Contributed to the open-source community with several web-based tools and applications.</li>
+            </ul>
+          </Experience>
+        </section>
+        <section id="resume" class="space-y-2 max-lg:mx-auto">
+          <h2 class="text-2xl font-bold text-center lg:text-start">Resume</h2>
+          <ResumeDownload />
+        </section>
+
         <section id="contact">
           <h2 class="text-2xl font-bold text-center lg:text-start">Contact</h2>
           <form class="w-full p-1 font-mono" @submit.prevent="contactHandler">
@@ -206,13 +242,13 @@ onMounted(() => {
               <label for="email" class="block mb-1 text-xs font-medium text-base-200">Your email</label>
               <input  id="email"
                      class="shadow-sm bg-transparent border border-base-300 text-base-200 placeholder-base-200/50 text-xs rounded-lg focus:ring-base-500 focus:border-base-300 block w-full p-2"
-                     placeholder="Ahmeddeghady99@gmail.com" required/>
+                     placeholder="ahmaddeghady99@gmail.com" required/>
             </div>
             <div class="mb-2">
               <label for="subject" class="block mb-1 text-xs font-medium text-base-200">Subject</label>
               <input type="text" id="subject"
                      class="shadow-sm bg-transparent border border-base-300 text-base-200 placeholder-base-200/50 text-xs rounded-lg focus:ring-base-500 focus:border-base-300 block w-full p-2"
-                     placeholder="Project Inquiry" required/>
+                     placeholder="Subject" required/>
             </div>
             <div class="mb-4">
               <label for="message" class="block mb-1 text-xs font-medium text-base-200">Message</label>
@@ -221,7 +257,7 @@ onMounted(() => {
                   class="w-full block shadow-sm bg-transparent border border-base-300 text-base-200 text-xs
                          placeholder-base-200/50 rounded-lg focus:ring-base-500 focus:border-base-300 p-2 no-scrollbar"
                   rows="3"
-                  placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                  placeholder="<p>Hi there, what's up?</p>"
                   required/>
             </div>
             <button type="submit"

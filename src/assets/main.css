@@ -6,8 +6,11 @@
     #right-content {
         scroll-behavior: smooth;
     }
-    p,h1,h2,h3,h4,h5,h6,a {
+    p,h1,h2,h3,h4,h5,h6,a, ul {
         @apply text-base-200 py-2 font-mono;
+    }
+    li {
+        @apply text-base-200 py-1.5 font-mono;
     }
 }
 @tailwind components;

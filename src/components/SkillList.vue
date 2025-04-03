@@ -4,6 +4,7 @@
   <slot />
   </li>
 </template>
+
 <script>
 export default {
   name: 'SkillList'
