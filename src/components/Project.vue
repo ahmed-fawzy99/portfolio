@@ -17,7 +17,7 @@ defineProps({
      class="block w-full px-4 py-3 text-xs border border-base-500 rounded-lg shadow hover:bg-base-700/30 h-fit">
     <span class="float-end text-base-300/50"><ArrowTopRightOnSquareIcon class="size-4"/></span>
       <h5 class="font-bold tracking-tight text-base-400 p-0 pb-1">{{ title }}</h5>
-      <p class="font-normal p-0">{{ description }}</p>
+      <p class="font-normal p-0 whitespace-pre-line">{{ description }}</p>
     <div class="flex justify-between items-baseline">
       <ul class="inline-block">
         <SkillList v-for="skill in skills" :key="skill" class="mb-0 mt-2">{{ skill }}</SkillList>

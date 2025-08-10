@@ -32,7 +32,7 @@ const contactHandler = () => {
     message
   };
   isSending.value = true;
-  fetch('https://server.ahmaddeghady.online/contact', {
+  fetch('https://server.ahmaddeghady.com/contact', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -103,7 +103,7 @@ onMounted(() => {
         <div class="">
           <h1 class="text-4xl font-bold pt-0 text-center lg:text-start">Ahmed Deghady</h1>
           <h3 class="text-xl text-center lg:text-start">Full-Stack Developer</h3>
-          <p class="text-xs text-center lg:text-start">I build web apps and scrape data.</p>
+          <p class="text-xs text-center lg:text-start">I build web apps.</p>
         </div>
         <div class="mt-8">
           <ul class="space-y-2 text-center lg:text-start">
@@ -128,29 +128,27 @@ onMounted(() => {
         <section id="about">
           <h2 class="text-2xl font-bold text-center lg:text-start">About</h2>
           <p class="text-justify text-base-300 text-xs text-sans">
-            Full-stack developer with a passion for building scalable web applications that solve real-world problems. With expertise in Laravel, Vue.js, and modern development practices, I transform ideas into functional, user-friendly digital experiences.
-          </p>
+            Full-stack developer with 2.5+ years’ experience delivering scalable, high-performance web applications using Laravel, Next.js, and Vue.js. Proven track record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. Passionate about clean architecture, maintainable code, and open-source collaboration.          </p>
         </section>
         <section id="skills">
           <h2 class="text-2xl font-bold mb-2 text-center lg:text-start">Skills</h2>
           <ul class="text-center lg:text-start">
             <SkillList>⭐ Laravel</SkillList>
             <SkillList>⭐ API Development</SkillList>
+            <SkillList>⭐ Next.js</SkillList>
+            <SkillList>⭐ React</SkillList>
             <SkillList>⭐ Vue.js</SkillList>
-            <SkillList>⭐ Nuxt.js</SkillList>
             <SkillList>⭐ TailwindCSS</SkillList>
-            <SkillList>React</SkillList>
-            <SkillList>Next.js</SkillList>
+            <SkillList>Nuxt.js</SkillList>
             <SkillList>Inertia.js</SkillList>
             <SkillList>TypeScript</SkillList>
             <SkillList>Python</SkillList>
             <SkillList>PHP</SkillList>
             <SkillList>Web Scraping</SkillList>
             <SkillList>PostgreSQL</SkillList>
-            <SkillList>GraphQL</SkillList>
             <SkillList>LangChain</SkillList>
-            <SkillList>Stripe Integration</SkillList>
             <SkillList>Bubble.io</SkillList>
+            <SkillList>Stripe Integration</SkillList>
             <SkillList>Linux Adminstration</SkillList>
             <SkillList>Bash Scripting</SkillList>
             <SkillList>Data Scraping</SkillList>
@@ -166,8 +164,63 @@ onMounted(() => {
           </ul>
         </section>
 
+        <section id="work" class="space-y-2">
+          <h2 class="text-2xl font-bold text-center lg:text-start">Work Experience</h2>
+          <Experience
+              title="Full-Stack Developer"
+              company="Coachlife.com"
+              location="Remote - Contract"
+              start-date="Dec 2024"
+              end-date="Aug 2025"
+          >
+            <ul class="">
+              <li>- Led the end-to-end migration from Bubble.io (no-code platform) to a fully custom Next.js and Laravel stack, serving as the sole developer for the project, reducing page load times by 75% and cutting costs by 60% enabling higher concurrent user capacity in the process.</li>
+              <li>- Oversaw the complete process, including architecture design, data migration, and feature parity, delivering a faster, more scalable, and cost-efficient platform.</li>
+              <li>- Developed and deployed new features to enhance functionality and boost user engagement.</li>
+              <li>- Diagnosed and resolved bugs to ensure a smooth, error-free user experience.</li>
+              <li>- Monitored and maintained website performance to ensure stability and reliability.</li>
+            </ul>
+          </Experience>
+          <Experience
+              title="Full-Stack Developer"
+              company="Almoroj.com - Part-Time "
+              start-date="Jan 2023"
+              end-date="Present"
+              :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
+          >
+            <ul class="">
+              <li>- Developed and maintained 2 internal ERP systems to manage the organization management.</li>
+              <li>- Developed customer-facing multi-lingual websites to help the organization attract international customers.</li>
+              <li>- Developed mini automation tools to help basic workflows.</li>
+            </ul>
+          </Experience>
+          <Experience
+              title="Full-Stack Developer"
+              company="Freelance"
+              start-date="Jan 2023"
+              end-date="Dec 2024"
+              :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
+          >
+            <ul class="">
+              <li>- Designed, developed, and deployed dynamic full-stack web applications, web scrapers, and APIs for startups and freelance clients, enhancing their operational efficiency.</li>
+              <li>- Created, maintained, and delivered front-end and back-end solutions, ensuring clean, maintainable code and user-friendly interfaces.</li>
+              <li>- Contributed to the open-source community with several web-based tools and applications.</li>
+            </ul>
+          </Experience>
+        </section>
+
         <section id="projects" class="space-y-2">
           <h2 class="text-2xl font-bold text-center lg:text-start">Projects</h2>
+          <Project title="Coachlife.com"
+                   description="- Led migration from Bubble.io to a custom stack, designing a Laravel API backend with role-based access control and an admin dashboard built with Filament
+                    - Developed a high-performance Next.js frontend using Static Site Generation (SSG) and Incremental Static Regeneration (ISR) to maximize speed and scalability.
+                    - Implemented SEO best practices and styled the interface with TailwindCSS for a responsive, modern design.
+                    - Built and launched new features to enhance functionality, while monitoring performance, diagnosing issues, and resolving bugs to maintain a smooth user experience.
+"
+                   link="https://www.coachlife.com"
+                   year="2025"
+                   :skills="['Laravel', 'Next.js', 'TailwindCSS']"
+          />
           <Project title="HR Management System"
                    description="A web application that helps HR departments manage their employees, salaries, and attendance."
                    link="https://github.com/ahmed-fawzy99/hr-management-system"
@@ -200,36 +253,6 @@ onMounted(() => {
           />
         </section>
 
-        <section id="work" class="space-y-2">
-          <h2 class="text-2xl font-bold text-center lg:text-start">Work Experience</h2>
-          <Experience
-              title="Website Maintainer"
-              company="Coachlife.com"
-              location="New Zealand, Remote - Part-time"
-              start-date="Dec 2024"
-          >
-            <ul class="">
-              <li>- Diagnosed and resolved bugs to ensure a smooth, error-free user experience.</li>
-              <li>- Developed and deployed new features, enhancing functionality and user engagement.</li>
-              <li>- Monitored and maintained website performance, ensuring stability and reliability.</li>
-            </ul>
-          </Experience>
-          <Experience
-              title="Full-Stack Developer"
-              company="Freelance"
-              start-date="Jan 2023"
-              end-date="Dec 2024"
-              :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
-          >
-            <ul class="">
-              <li>- Designed, developed, and deployed dynamic full-stack web applications, web scrapers, and APIs
-                for startups and freelance clients, enhancing their operational efficiency.</li>
-              <li>- Created, maintained, and delivered front-end and back-end solutions, ensuring clean, maintainable
-                code and user-friendly interfaces.</li>
-              <li>- Contributed to the open-source community with several web-based tools and applications.</li>
-            </ul>
-          </Experience>
-        </section>
         <section id="resume" class="space-y-2 max-lg:mx-auto">
           <h2 class="text-2xl font-bold text-center lg:text-start">Resume</h2>
           <ResumeDownload />
