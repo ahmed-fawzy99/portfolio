@@ -171,7 +171,7 @@ onMounted(() => {
               company="Coachlife.com"
               location="Remote - Contract"
               start-date="Dec 2024"
-              end-date="Aug 2025"
+              end-date="Present"
           >
             <ul class="">
               <li>- Led the end-to-end migration from Bubble.io (no-code platform) to a fully custom Next.js and Laravel stack, serving as the sole developer for the project, reducing page load times by 75% and cutting costs by 60% enabling higher concurrent user capacity in the process.</li>
