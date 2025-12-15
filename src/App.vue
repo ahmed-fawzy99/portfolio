@@ -7,6 +7,7 @@ import {onMounted, ref} from "vue";
 import Swal from "sweetalert2";
 import Experience from "@/components/Experience.vue";
 import ResumeDownload from "@/components/ResumeDownload.vue";
+import Certification from "@/components/Certification.vue";
 
 const isSending = ref(false);
 
@@ -72,16 +73,16 @@ onMounted(() => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           history.replaceState(null, null, `#${entry.target.id}`);
-          const sectionText = document.getElementById(entry.target.id + "-a").innerText;
-          if (!sectionText.startsWith('___')) {
-            document.getElementById(entry.target.id + "-a").innerText = '___' + document.getElementById(entry.target.id + "-a").innerText + '___';
-          }
-          for (const section of sections) {
-            if (section.id !== entry.target.id) {
-              const oldSection = document.getElementById(section.id + "-a");
-              oldSection.innerText = oldSection.innerText.replaceAll('___', '');
-            }
-          }
+          // const sectionText = document.getElementById(entry.target.id + "-a").innerText;
+          // if (!sectionText.startsWith('___')) {
+          //   document.getElementById(entry.target.id + "-a").innerText = '___' + document.getElementById(entry.target.id + "-a").innerText + '___';
+          // }
+          // for (const section of sections) {
+          //   if (section.id !== entry.target.id) {
+          //     const oldSection = document.getElementById(section.id + "-a");
+          //     oldSection.innerText = oldSection.innerText.replaceAll('___', '');
+          //   }
+          // }
         }
       });
     }, {threshold: 0.5});
@@ -103,16 +104,25 @@ onMounted(() => {
         <div class="">
           <h1 class="text-4xl font-bold pt-0 text-center lg:text-start">Ahmed Deghady</h1>
           <h3 class="text-xl text-center lg:text-start">Full-Stack Developer</h3>
-          <p class="text-xs text-center lg:text-start">I build web apps.</p>
+          <p class="text-xs text-center lg:text-start">I build web apps. A to Z.</p>
+          <div class="flex justify-center lg:justify-start items-center gap-2 mt-4">
+            <a href="https://www.credly.com/badges/8243bcfc-60f8-4898-8030-6c68f7e2e209" target="_blank">
+              <img src="@/img/ccp-badge.png" alt="AWS Certified Cloud Practitioner Badge" class="w-20" />
+            </a>
+            <a href="https://www.credly.com/badges/021daa59-cb49-4323-9282-199cd01032e2" target="_blank">
+              <img src="@/img/saa-badge.png" alt="AWS Certified Solutions Architect Badge" class="w-20" />
+            </a>
+          </div>
         </div>
         <div class="mt-8">
           <ul class="space-y-2 text-center lg:text-start">
-            <li><a id="about-a" href="#about">&#60;About&#62;</a></li>
-            <li><a id="skills-a" href="#skills">&#60;Skills&#62;</a></li>
-            <li><a id="projects-a" href="#projects">&#60;Projects&#62;</a></li>
-            <li><a id="work-a" href="#work">&#60;Experience&#62;</a></li>
-            <li><a id="resume-a" href="#resume">&#60;Resume&#62;</a></li>
-            <li><a id="contact-a" href="#contact">&#60;Contact&#62;</a></li>
+            <li><a id="about-a" href="#about">&#60;About /&#62;</a></li>
+            <li><a id="skills-a" href="#skills">&#60;Skills /&#62;</a></li>
+            <li><a id="work-a" href="#work">&#60;Experience /&#62;</a></li>
+            <li><a id="projects-a" href="#projects">&#60;Projects /&#62;</a></li>
+            <li><a id="certifications-a" href="#certifications">&#60;Certifications /&#62;</a></li>
+            <li><a id="resume-a" href="#resume">&#60;Resume /&#62;</a></li>
+            <li><a id="contact-a" href="#contact">&#60;Contact /&#62;</a></li>
           </ul>
         </div>
         <div class="h-full flex flex-col justify-end mb-10">
@@ -128,7 +138,8 @@ onMounted(() => {
         <section id="about">
           <h2 class="text-2xl font-bold text-center lg:text-start">About</h2>
           <p class="text-justify text-base-300 text-xs text-sans">
-            Full-stack developer with 2.5+ years’ experience delivering scalable, high-performance web applications using Laravel, Next.js, and Vue.js. Proven track record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. Passionate about clean architecture, maintainable code, and open-source collaboration.          </p>
+            Full-stack developer with 3 years’ experience delivering scalable, high-performance web applications using Laravel and Next.js. Proven record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. Passionate about clean architecture, maintainable code, and open-source collaboration.
+        </p>
         </section>
         <section id="skills">
           <h2 class="text-2xl font-bold mb-2 text-center lg:text-start">Skills</h2>
@@ -137,8 +148,10 @@ onMounted(() => {
             <SkillList>⭐ API Development</SkillList>
             <SkillList>⭐ Next.js</SkillList>
             <SkillList>⭐ React</SkillList>
+            <SkillList>⭐ TypeScript</SkillList>
             <SkillList>⭐ Vue.js</SkillList>
             <SkillList>⭐ TailwindCSS</SkillList>
+            <SkillList>AWS</SkillList>
             <SkillList>Nuxt.js</SkillList>
             <SkillList>Inertia.js</SkillList>
             <SkillList>TypeScript</SkillList>
@@ -157,6 +170,7 @@ onMounted(() => {
             <SkillList>Bootstrap</SkillList>
             <SkillList>Git</SkillList>
             <SkillList>Docker</SkillList>
+            <SkillList>Kubernetes (Basics)</SkillList>
             <SkillList>HTML5</SkillList>
             <SkillList>CSS3</SkillList>
             <SkillList>Graphic Design (Adobe Photoshop)</SkillList>
@@ -169,7 +183,7 @@ onMounted(() => {
           <Experience
               title="Full-Stack Developer"
               company="Coachlife.com"
-              location="Remote - Contract"
+              location="Remote - Full-time Contract"
               start-date="Dec 2024"
               end-date="Present"
           >
@@ -183,9 +197,9 @@ onMounted(() => {
           </Experience>
           <Experience
               title="Full-Stack Developer"
-              company="Almoroj.com - Part-Time "
+              company="Almoroj.com - Part-Time"
               start-date="Jan 2023"
-              end-date="Present"
+              end-date="Sep 2025"
               :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
           >
             <ul class="">
@@ -253,6 +267,45 @@ onMounted(() => {
           />
         </section>
 
+
+        <section id="certifications" class="space-y-2">
+          <h2 class="text-2xl font-bold text-center lg:text-start">Trainings & Certifications</h2>
+          <Certification title="AWS Certified Solutions Architect – Associate"
+                         issuer="Amazon Web Services"
+                         date="Dec 2025"
+                         link="https://www.credly.com/badges/021daa59-cb49-4323-9282-199cd01032e2/public_url"
+          >
+            <div>
+              <p>- Validated expertise in designing and deploying scalable, highly available, and fault-tolerant systems on AWS.</p>
+              <p>- Demonstrated ability to select appropriate AWS services to meet specific technical requirements and optimize performance.</p>
+            </div>
+          </Certification>
+          <Certification title="AWS Certified Cloud Practitioner"
+                         issuer="Amazon Web Services"
+                         date="Nov 2025"
+                         link="https://www.credly.com/badges/8243bcfc-60f8-4898-8030-6c68f7e2e209/public_url"
+          >
+            <p>- Validated foundational knowledge of AWS cloud concepts, services, and terminology.</p>
+            <p>- Demonstrated understanding of AWS core services, security, architecture, pricing, and support.</p>
+          </Certification>
+          <Certification title="Cisco Certified Network Associate CCNA Training"
+                         issuer="Sprints"
+                         date="2022"
+          >
+            <p>- Completed comprehensive training on networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
+            <p>- Gained practical skills in configuring and troubleshooting Cisco routers and switches.</p>
+          </Certification>
+          <Certification title="Front-End Development Booster"
+                         issuer="NTI"
+                         date="2021"
+          />
+          <Certification title="Blockchain Workshop"
+                         issuer="iHub"
+                         date="2020"
+          />
+        </section>
+
+
         <section id="resume" class="space-y-2 max-lg:mx-auto">
           <h2 class="text-2xl font-bold text-center lg:text-start">Resume</h2>
           <ResumeDownload />
@@ -295,8 +348,8 @@ onMounted(() => {
 
         <footer>
           <p class="text-justify text-base-300 text-xs text-sans mb-6">
-            Made with 💚 with Vue.js + TailwindCSS, and a touch of NodeJS to receive your messages.
-            Deployed on Google E2-micro. Coded on Webstorm.
+            Made with 💚 using Vue.js + TailwindCSS, and a touch of NodeJS to receive your messages.
+            Deployed on Cloudflare Pages and Google E2-micro. Coded on Webstorm.
           </p>
         </footer>
       </div>
