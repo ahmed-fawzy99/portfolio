@@ -109,6 +109,9 @@ onMounted(() => {
             <a href="https://www.credly.com/badges/8243bcfc-60f8-4898-8030-6c68f7e2e209" target="_blank">
               <img src="@/img/ccp-badge.png" alt="AWS Certified Cloud Practitioner Badge" class="w-20" />
             </a>
+            <a href="https://www.credly.com/badges/0794644c-c939-4e76-b4c2-7f15e3cde1cd/public_url" target="_blank">
+              <img src="@/img/aif-badge.png" alt="AWS Certified AI Practitioner Badge" class="w-20" />
+            </a>
             <a href="https://www.credly.com/badges/021daa59-cb49-4323-9282-199cd01032e2" target="_blank">
               <img src="@/img/saa-badge.png" alt="AWS Certified Solutions Architect Badge" class="w-20" />
             </a>
@@ -279,6 +282,14 @@ onMounted(() => {
               <p>- Validated expertise in designing and deploying scalable, highly available, and fault-tolerant systems on AWS.</p>
               <p>- Demonstrated ability to select appropriate AWS services to meet specific technical requirements and optimize performance.</p>
             </div>
+          </Certification>
+          <Certification title="AWS Certified AI Practitioner"
+                         issuer="Amazon Web Services"
+                         date="Dec 2025"
+                         link="https://www.credly.com/badges/0794644c-c939-4e76-b4c2-7f15e3cde1cd/public_url"
+          >
+            <p>- Validated knowledge of AI and ML concepts and AWS services related to AI/ML.</p>
+            <p>- Demonstrated ability to build, train, and deploy machine learning models using AWS services.</p>
           </Certification>
           <Certification title="AWS Certified Cloud Practitioner"
                          issuer="Amazon Web Services"
