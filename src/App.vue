@@ -125,6 +125,7 @@ onMounted(() => {
             <li><a id="projects-a" href="#projects">&#60;Projects /&#62;</a></li>
             <li><a id="certifications-a" href="#certifications">&#60;Certifications /&#62;</a></li>
             <li><a id="resume-a" href="#resume">&#60;Resume /&#62;</a></li>
+            <li><a id="blog-a" href="#blog">&#60;Blog /&#62;</a></li>
             <li><a id="contact-a" href="#contact">&#60;Contact /&#62;</a></li>
           </ul>
         </div>
@@ -320,6 +321,11 @@ onMounted(() => {
         <section id="resume" class="space-y-2 max-lg:mx-auto">
           <h2 class="text-2xl font-bold text-center lg:text-start">Resume</h2>
           <ResumeDownload />
+        </section>
+
+        <section id="blog" class="space-y-2 max-lg:mx-auto">
+          <h2 class="text-2xl font-bold text-center lg:text-start">Blog</h2>
+          <ResumeDownload text="View Blog" link="https://blog.ahmaddeghady.com/"/>
         </section>
 
         <section id="contact">
