@@ -11,7 +11,7 @@ defineProps({
   <div class="flex justify-center lg:justify-start">
     <a
         target="_blank"
-        :href="link ?? 'https://www.dropbox.com/scl/fo/4dr2yoo8kcuyp2w9y6ren/AKnBh-YFuwhk0JAh9Nq0EGw?rlkey=8jidqefq97z62v8j7ss3wx6wm&st=jzl5g3j0&dl=0'"
+        :href="link ?? 'https://www.dropbox.com/scl/fi/veqmxnodxm2gr9uafk5hj/Ahmed-Deghady-Resume.pdf?rlkey=yypcp5bd7x4id98i3eqk87zmk&st=u54nnhy1&dl=0'"
         class="inline-flex items-center justify-center gap-2 px-4 py-2 font-medium text-center rounded-lg border border-base-500 hover:bg-base-700/30"
     >
       <ArrowTopRightOnSquareIcon class="w-5 h-5" />
