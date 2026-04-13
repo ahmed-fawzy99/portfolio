@@ -141,7 +141,7 @@ onMounted(() => {
       <div class="flex flex-col gap-8 mb-2">
         <section id="about">
           <h2 class="text-2xl font-bold text-center lg:text-start">About</h2>
-          <p class="text-justify text-base-300 text-xs text-sans">
+          <p class="text-justify text-base-300 text-sans">
             Full-stack developer with 3 years of experience delivering scalable, high-performance web applications using Laravel and Next.js. Proven track record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. AWS Certified Cloud Practitioner and Solutions Architect (Associate), with hands-on experience designing and deploying secure, scalable cloud architectures. Passionate about clean architecture, maintainable code, and open-source collaboration.
         </p>
         </section>

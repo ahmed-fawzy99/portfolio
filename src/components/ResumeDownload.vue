@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div>
+  <div class="flex justify-center lg:justify-start">
     <a
         target="_blank"
         :href="link ?? 'https://www.dropbox.com/scl/fo/4dr2yoo8kcuyp2w9y6ren/AKnBh-YFuwhk0JAh9Nq0EGw?rlkey=8jidqefq97z62v8j7ss3wx6wm&st=jzl5g3j0&dl=0'"
