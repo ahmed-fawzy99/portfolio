@@ -142,7 +142,7 @@ onMounted(() => {
         <section id="about">
           <h2 class="text-2xl font-bold text-center lg:text-start">About</h2>
           <p class="text-justify text-base-300 text-xs text-sans">
-            Full-stack developer with 3 years’ experience delivering scalable, high-performance web applications using Laravel and Next.js. Proven record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. Passionate about clean architecture, maintainable code, and open-source collaboration.
+            Full-stack developer with 3 years of experience delivering scalable, high-performance web applications using Laravel and Next.js. Proven track record in optimizing performance, leading full-stack migrations, and building automation tools that reduce operational costs. AWS Certified Cloud Practitioner and Solutions Architect (Associate), with hands-on experience designing and deploying secure, scalable cloud architectures. Passionate about clean architecture, maintainable code, and open-source collaboration.
         </p>
         </section>
         <section id="skills">
@@ -157,28 +157,46 @@ onMounted(() => {
             <SkillList>⭐ TailwindCSS</SkillList>
             <SkillList>AWS</SkillList>
             <SkillList>Nuxt.js</SkillList>
-            <SkillList>Inertia.js</SkillList>
-            <SkillList>TypeScript</SkillList>
+            <SkillList>Livewire</SkillList>
+            <SkillList>FilamentPHP</SkillList>
             <SkillList>Python</SkillList>
             <SkillList>PHP</SkillList>
-            <SkillList>Web Scraping</SkillList>
             <SkillList>PostgreSQL</SkillList>
-            <SkillList>LangChain</SkillList>
+            <SkillList>Redis</SkillList>
+            <SkillList>Meilisearch</SkillList>
+            <SkillList>Web Scraping</SkillList>
+            <SkillList>WordPress Development</SkillList>
             <SkillList>Bubble.io</SkillList>
-            <SkillList>Stripe Integration</SkillList>
-            <SkillList>Linux Adminstration</SkillList>
-            <SkillList>Bash Scripting</SkillList>
-            <SkillList>Data Scraping</SkillList>
-            <SkillList>Nginx</SkillList>
-            <SkillList>C++</SkillList>
-            <SkillList>Bootstrap</SkillList>
+            <SkillList>DigitalOcean</SkillList>
+            <SkillList>Cloudflare</SkillList>
+            <SkillList>Vercel</SkillList>
+            <SkillList>AWS Bedrock</SkillList>
+            <SkillList>AWS SageMaker</SkillList>
+            <SkillList>LangChain</SkillList>
+            <SkillList>RAGs</SkillList>
+            <SkillList>OpenAI API</SkillList>
+            <SkillList>Anthropic API</SkillList>
             <SkillList>Git</SkillList>
+            <SkillList>GitHub Actions</SkillList>
             <SkillList>Docker</SkillList>
             <SkillList>Kubernetes (Basics)</SkillList>
+            <SkillList>Nginx</SkillList>
+            <SkillList>Linux OS</SkillList>
+            <SkillList>Pest</SkillList>
+            <SkillList>Jest</SkillList>
+            <SkillList>Testing Library</SkillList>
+            <SkillList>Stripe</SkillList>
+            <SkillList>Paddle</SkillList>
+            <SkillList>MUX</SkillList>
+            <SkillList>Loops.so</SkillList>
+            <SkillList>PostHog</SkillList>
+            <SkillList>Sentry</SkillList>
+            <SkillList>Weglot</SkillList>
+            <SkillList>Cloudflare Workers</SkillList>
+            <SkillList>Twilio</SkillList>
             <SkillList>HTML5</SkillList>
             <SkillList>CSS3</SkillList>
-            <SkillList>Graphic Design (Adobe Photoshop)</SkillList>
-            <SkillList>Video Editing (Adobe Premiere Pro)</SkillList>
+            <SkillList>Bootstrap</SkillList>
           </ul>
         </section>
 
@@ -214,9 +232,9 @@ onMounted(() => {
           </Experience>
           <Experience
               title="Full-Stack Developer"
-              company="Freelance"
-              start-date="Jan 2023"
-              end-date="Dec 2024"
+              company="Freelance & Open-Source"
+              start-date="Jan 2023 – Dec 2024"
+              end-date="Dec 2025 - Present"
               :skills="['Laravel', 'Vue.js', 'Inertia.js', 'TailwindCSS', 'API Development', 'Web Scraping', 'Nuxt.js', 'PostgreSQL', 'WordPress', 'Bubble.io', 'Stripe Integration']"
           >
             <ul class="">
@@ -238,6 +256,12 @@ onMounted(() => {
                    link="https://www.coachlife.com"
                    year="2025"
                    :skills="['Laravel', 'Next.js', 'TailwindCSS']"
+          />
+          <Project title="Time Logger"
+                   description="An open-source time logging application for tracking and analyzing work sessions, featuring efficient session management and a clean, user-friendly interface."
+                   link="https://github.com/ahmed-fawzy99/time-logger"
+                   year="2024"
+                   :skills="['Laravel', 'React', 'TailwindCSS']"
           />
           <Project title="HR Management System"
                    description="A web application that helps HR departments manage their employees, salaries, and attendance."
@@ -301,14 +325,14 @@ onMounted(() => {
             <p>- Demonstrated understanding of AWS core services, security, architecture, pricing, and support.</p>
           </Certification>
           <Certification title="Cisco Certified Network Associate CCNA Training"
-                         issuer="Sprints"
+                         issuer="NTI"
                          date="2022"
           >
             <p>- Completed comprehensive training on networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
             <p>- Gained practical skills in configuring and troubleshooting Cisco routers and switches.</p>
           </Certification>
           <Certification title="Front-End Development Booster"
-                         issuer="NTI"
+                         issuer="Sprints"
                          date="2021"
           />
           <Certification title="Blockchain Workshop"
