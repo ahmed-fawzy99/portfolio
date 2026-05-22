@@ -115,6 +115,9 @@ onMounted(() => {
             <a href="https://www.credly.com/badges/021daa59-cb49-4323-9282-199cd01032e2" target="_blank">
               <img src="@/img/saa-badge.png" alt="AWS Certified Solutions Architect Badge" class="w-20" />
             </a>
+            <a href="https://www.credly.com/badges/d3d0a87e-a516-40ae-a8e4-6e388044018b" target="_blank">
+              <img src="@/img/ckad_badge.png" alt="Certified Kubernetes Application Developer Badge" class="w-20" />
+            </a>
           </div>
         </div>
         <div class="mt-8">
@@ -125,7 +128,7 @@ onMounted(() => {
             <li><a id="projects-a" href="#projects">&#60;Projects /&#62;</a></li>
             <li><a id="certifications-a" href="#certifications">&#60;Certifications /&#62;</a></li>
             <li><a id="resume-a" href="#resume">&#60;Resume /&#62;</a></li>
-            <li><a id="blog-a" href="#blog">&#60;Blog /&#62;</a></li>
+<!--            <li><a id="blog-a" href="#blog">&#60;Blog /&#62;</a></li>-->
             <li><a id="contact-a" href="#contact">&#60;Contact /&#62;</a></li>
           </ul>
         </div>
@@ -298,6 +301,16 @@ onMounted(() => {
 
         <section id="certifications" class="space-y-2">
           <h2 class="text-2xl font-bold text-center lg:text-start">Trainings & Certifications</h2>
+          <Certification title="Certified Kubernetes Application Developer (CKAD)"
+                         issuer="The Linux Foundation"
+                         date="May 2026"
+                         link="https://www.credly.com/badges/d3d0a87e-a516-40ae-a8e4-6e388044018b/public_url"
+          >
+            <div>
+              <p>- Validated hands-on skills in designing, building, configuring, and exposing cloud-native applications on Kubernetes.</p>
+              <p>- Demonstrated proficiency with core Kubernetes primitives, multi-container pods, observability, and application lifecycle management.</p>
+            </div>
+          </Certification>
           <Certification title="AWS Certified Solutions Architect – Associate"
                          issuer="Amazon Web Services"
                          date="Dec 2025"
@@ -347,10 +360,10 @@ onMounted(() => {
           <ResumeDownload />
         </section>
 
-        <section id="blog" class="space-y-2 max-lg:mx-auto">
-          <h2 class="text-2xl font-bold text-center lg:text-start">Blog</h2>
-          <ResumeDownload text="View Blog" link="https://blog.ahmaddeghady.com/"/>
-        </section>
+<!--        <section id="blog" class="space-y-2 max-lg:mx-auto">-->
+<!--          <h2 class="text-2xl font-bold text-center lg:text-start">Blog</h2>-->
+<!--          <ResumeDownload text="View Blog" link="https://blog.ahmaddeghady.com/"/>-->
+<!--        </section>-->
 
         <section id="contact">
           <h2 class="text-2xl font-bold text-center lg:text-start">Contact</h2>
@@ -374,7 +387,7 @@ onMounted(() => {
                   class="w-full block shadow-sm bg-transparent border border-base-300 text-base-200 text-xs
                          placeholder-base-200/50 rounded-lg focus:ring-base-500 focus:border-base-300 p-2 no-scrollbar"
                   rows="3"
-                  placeholder="<p>Hi there, what's up?</p>"
+                  placeholder="Hi there, what's up?"
                   required/>
             </div>
             <button type="submit"
