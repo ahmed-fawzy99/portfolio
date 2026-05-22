@@ -340,6 +340,7 @@ onMounted(() => {
           <Certification title="Cisco Certified Network Associate CCNA Training"
                          issuer="NTI"
                          date="2022"
+                         link="https://pub-2d4798b44c2c47d1adecc6c62bf47f38.r2.dev/img/certs/nti_ccna.jpg"
           >
             <p>- Completed comprehensive training on networking fundamentals, IP connectivity, security fundamentals, and automation.</p>
             <p>- Gained practical skills in configuring and troubleshooting Cisco routers and switches.</p>
@@ -347,11 +348,19 @@ onMounted(() => {
           <Certification title="Front-End Development Booster"
                          issuer="Sprints"
                          date="2021"
-          />
+                         link="https://pub-2d4798b44c2c47d1adecc6c62bf47f38.r2.dev/img/certs/sprints_fe_booster.pdf"
+          >
+            <p>- Hands-on training in HTML, CSS, and JavaScript fundamentals for building modern web interfaces.</p>
+            <p>- Introduced to npm and the front-end tooling ecosystem for managing packages and project workflows.</p>
+          </Certification>
           <Certification title="Blockchain Workshop"
                          issuer="iHub"
                          date="2020"
-          />
+                         link="https://pub-2d4798b44c2c47d1adecc6c62bf47f38.r2.dev/img/certs/blockchain_ihub.pdf"
+          >
+            <p>- Learned Solidity for writing smart contracts on the Ethereum blockchain.</p>
+            <p>- Gained hands-on experience deploying and testing contracts using Ganache and core blockchain development tools.</p>
+          </Certification>
         </section>
 
 
