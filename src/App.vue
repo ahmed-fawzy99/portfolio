@@ -208,7 +208,7 @@ onMounted(() => {
           <Experience
               title="Full-Stack Developer"
               company="Coachlife.com"
-              location="Remote - Full-time Contract"
+              location="Remote - Contract"
               start-date="Dec 2024"
               end-date="Present"
           >
